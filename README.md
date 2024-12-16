@@ -160,4 +160,4 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 Feel free to explore, contribute, and help improve the project!  
-🔗 **[GitHub Repository](https://github.com/johndev94/sign-language-translator)**
+🔗 **[GitHub Repository](https://github.com/johndev94/sign_letter_translator_streamlit/tree/main?tab=readme-ov-file#-future-improvements)**
