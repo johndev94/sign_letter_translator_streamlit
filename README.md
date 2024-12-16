@@ -1,118 +1,163 @@
-# Real-time Object Detection and Tracking with YOLOv8 and Streamlit
 
-This repository is a comprehensive open-source project that demonstrates the integration of object detection and tracking using the YOLOv8 object detection algorithm and Streamlit, a popular Python web application framework for building interactive web applications. This project provides a user-friendly and customizable interface that can detect and track objects in real-time video streams.
+# 🌟 Sign Language Letter Translator 🌟
 
-## Demo WebApp
+Welcome to the **Sign Language Letter Translator**! This project uses **YOLOv8**, **Streamlit**, and **Python** to detect and translate sign language letters. Its interactive interface processes images and video feeds to make sign language translation seamless and accessible.
 
-This app is up and running on Streamlit cloud server!!! Thanks 'Streamlit' for the community support for the cloud upload. You can check the demo of this web application on the link below.
+---
 
-[yolov8-streamlit-detection-tracking-webapp](https://codingmantras-yolov8-streamlit-detection-tracking-app-njcqjg.streamlit.app/)
+## 📜 Table of Contents
+- [✨ Features](#-features)
+- [🛠️ Technologies Used](#️-technologies-used)
+- [📥 Installation](#-installation)
+- [📖 Usage](#-usage)
+- [📂 Project Structure](#-project-structure)
+- [📊 Results and Performance](#-results-and-performance)
+- [🙌 Acknowledgments](#-acknowledgments)
+- [📜 License](#-license)
+- [🚀 Future Improvements](#-future-improvements)
 
-## Tracking With Object Detection Demo
+---
 
-<https://user-images.githubusercontent.com/104087274/234874398-75248e8c-6965-4c91-9176-622509f0ad86.mov>
+## ✨ Features
 
-## Demo Pics
+### 🔍 Real-Time and Batch Processing
+- **Real-time Detection**: Translate sign language using live webcam feeds.
+- **Image Upload**: Detect letters in uploaded images.
 
-### Home page
+### 🌍 Multi-Language Support
+- Translate between **Irish Sign Language (ISL)**, **British Sign Language (BSL)**, and **American Sign Language (ASL)**.
 
-<img src="https://github.com/CodingMantras/yolov8-streamlit-detection-tracking/blob/master/assets/pic1.png" >
+### 🎛️ Customization and Feedback
+- Adjustable model confidence levels for precision control.
+- Visual feedback with bounding boxes and translations.
 
-### Page after uploading an image and object detection
+---
 
-<img src="https://github.com/CodingMantras/yolov8-streamlit-detection-tracking/blob/master/assets/pic3.png" >
+## 🛠️ Technologies Used
 
-### Segmentation task on image
+### Core Technologies
+- **Python**: The backbone of the application.
+- **YOLOv8**: State-of-the-art object detection for recognizing sign language letters.
+- **Streamlit**: Framework for an interactive, browser-based interface.
 
-<img src="https://github.com/CodingMantras/yolov8-streamlit-detection-tracking/blob/master/assets/segmentation.png" >
+### Libraries
+- **Pillow (PIL)**: Image processing.
+- **OpenCV**: Video feed processing.
+- **PyYAML**: Configuration management.
+- **Streamlit Authenticator**: Secure user authentication.
 
-## Requirements
+---
 
-Python 3.6+
-YOLOv8
-Streamlit
+## 📥 Installation
 
-```bash
-pip install ultralytics streamlit pytube
+### Prerequisites
+- Python 3.8 or higher
+- Virtual environment support
+- Pre-trained YOLOv8 models
+
+### Steps
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/johndev94/sign-language-translator.git
+   cd sign-language-translator
+   ```
+
+2. **Set up a Python virtual environment**:
+   ```bash
+   python -m venv env
+   source env/bin/activate  # On Windows: .\env\Scripts\activate
+   ```
+
+3. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Download pre-trained YOLOv8 models** and place them in the `models/` folder.
+
+5. **Run the app**:
+   ```bash
+   streamlit run app.py
+   ```
+
+---
+
+## 📖 Usage
+
+### Step 1: Launch the App
+- Start the Streamlit server and access the app via your browser.
+
+### Step 2: Configure the Sidebar
+- Select the source type (Image, Video, or Webcam).
+- Adjust model confidence.
+- Choose input and output languages.
+
+### Step 3: Upload or Stream Content
+- Upload an image or video file.
+- Use a webcam for live detection.
+
+### Step 4: View Results
+- Detected letters, bounding boxes, and translations are displayed on-screen.
+
+---
+
+## 📂 Project Structure
+
+```
+project-root/
+├── app.py                  # Main application file
+├── helper.py               # Helper functions
+├── settings.py             # Configuration settings
+├── models/                 # Pre-trained YOLOv8 models
+├── translated letters/     # Translated images for ISL, BSL, ASL
+│   ├── ISL/
+│   ├── BSL/
+│   └── ASL/
+├── requirements.txt        # Python dependencies
+└── README.md               # Documentation
 ```
 
-## Installation
+---
 
-- Clone the repository: git clone <https://github.com/CodingMantras/yolov8-streamlit-detection-tracking.git>
-- Change to the repository directory: `cd yolov8-streamlit-detection-tracking`
-- Create `weights`, `videos`, and `images` directories inside the project.
-- Download the pre-trained YOLOv8 weights from (<https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8n.pt>) and save them to the `weights` directory in the same project.
+## 📊 Results and Performance
 
-## Usage
+### Model Accuracy
+- **ISL Dataset**: Achieved 99.5% accuracy with no false predictions.
+- **BSL Dataset**: mAP@0.5:0.95 reached **91.5%**.
+- **ASL Dataset**: Over **90% precision** for most classes.
 
-- Run the app with the following command: `streamlit run app.py`
-- The app should open in a new browser window.
+### Real-Time Performance
+- **Inference time**: ~713ms per frame on a standard GPU.
 
-### ML Model Config
+### Evaluation Metrics
+- **Precision**: Accuracy of detected letters.
+- **Recall**: Completeness of detections.
+- **mAP (Mean Average Precision)**: Measures overall model performance.
 
-- Select task (Detection, Segmentation)
-- Select model confidence
-- Use the slider to adjust the confidence threshold (25-100) for the model.
+---
 
-One the model config is done, select a source.
+## 🙌 Acknowledgments
 
-### Detection on images
+Special thanks to:
+- **YOLOv8 creators** for enabling advanced object detection.
+- **Streamlit team** for their powerful interactive framework.
+- All contributors to the open-source libraries used in this project.
 
-- The default image with its objects-detected image is displayed on the main page.
-- Select a source. (radio button selection `Image`).
-- Upload an image by clicking on the "Browse files" button.
-- Click the "Detect Objects" button to run the object detection algorithm on the uploaded image with the selected confidence threshold.
-- The resulting image with objects detected will be displayed on the page. Click the "Download Image" button to download the image.("If save image to download" is selected)
+---
 
-## Detection in Videos
+## 📜 License
 
-- Create a folder with name `videos` in the same directory
-- Dump your videos in this folder
-- In `settings.py` edit the following lines.
+This project is licensed under the [MIT License](LICENSE).
 
-```python
-# video
-VIDEO_DIR = ROOT / 'videos' # After creating the videos folder
+---
 
-# Suppose you have four videos inside videos folder
-# Edit the name of video_1, 2, 3, 4 (with the names of your video files) 
-VIDEO_1_PATH = VIDEO_DIR / 'video_1.mp4' 
-VIDEO_2_PATH = VIDEO_DIR / 'video_2.mp4'
-VIDEO_3_PATH = VIDEO_DIR / 'video_3.mp4'
-VIDEO_4_PATH = VIDEO_DIR / 'video_4.mp4'
+## 🚀 Future Improvements
+- Dynamic sentence-level translations.
+- Support for additional sign languages and gestures.
+- 3D gesture rendering for enhanced feedback.
+- Optimization for real-time performance.
 
-# Edit the same names here also.
-VIDEOS_DICT = {
-    'video_1': VIDEO_1_PATH,
-    'video_2': VIDEO_2_PATH,
-    'video_3': VIDEO_3_PATH,
-    'video_4': VIDEO_4_PATH,
-}
+---
 
-# Your videos will start appearing inside streamlit webapp 'Choose a video'.
-```
-
-- Click on `Detect Video Objects` button and the selected task (detection/segmentation) will start on the selected video.
-
-### Detection on RTSP
-
-- Select the RTSP stream button
-- Enter the rtsp url inside the textbox and hit `Detect Objects` button
-
-### Detection on YouTube Video URL
-
-- Select the source as YouTube
-- Copy paste the url inside the text box.
-- The detection/segmentation task will start on the YouTube video url
-
-<https://user-images.githubusercontent.com/104087274/226178296-684ad72a-fe5f-4589-b668-95c835cd8d8a.mov>
-
-## Acknowledgements
-
-This app is based on the YOLOv8(<https://github.com/ultralytics/ultralytics>) object detection algorithm. The app uses the Streamlit(<https://github.com/streamlit/streamlit>) library for the user interface.
-
-### Disclaimer
-
-Please note that this project is intended for educational purposes only and should not be used in production environments.
-
-**Hit star ⭐ if you like this repo!!!**
+Feel free to explore, contribute, and help improve the project!  
+🔗 **[GitHub Repository](https://github.com/johndev94/sign-language-translator)**
