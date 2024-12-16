@@ -143,11 +143,6 @@ Special thanks to:
 - **Streamlit team** for their powerful interactive framework.
 - All contributors to the open-source libraries used in this project.
 
----
-
-## 📜 License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ---
 
