@@ -1,7 +1,6 @@
-
 # 🌟 Sign Language Letter Translator 🌟
 
-Welcome to the **Sign Language Letter Translator**! This project uses **YOLOv8**, **Streamlit**, and **Python** to detect and translate sign language letters. Its interactive interface processes images and video feeds to make sign language translation seamless and accessible.
+Welcome to the **Sign Language Letter Translator**! This project uses **YOLOv8**, **Streamlit**, and **Python** to detect and translate sign language letters. Its interactive interface processes images and video feeds to make sign language translation seamless and accessible. The nightmare from my time in college, enjoy!
 
 ---
 
@@ -57,28 +56,32 @@ Welcome to the **Sign Language Letter Translator**! This project uses **YOLOv8**
 
 ### Steps
 1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/johndev94/sign-language-translator.git
+   
+bash
+   git clone https://github.com/johndev94/sign_letter_translator_streamlit.git
    cd sign-language-translator
-   ```
+
 
 2. **Set up a Python virtual environment**:
-   ```bash
+   
+bash
    python -m venv env
    source env/bin/activate  # On Windows: .\env\Scripts\activate
-   ```
+
 
 3. **Install dependencies**:
-   ```bash
+   
+bash
    pip install -r requirements.txt
-   ```
 
-4. **Download pre-trained YOLOv8 models** and place them in the `models/` folder.
+
+4. **Download pre-trained YOLOv8 models** and place them in the models/ folder.
 
 5. **Run the app**:
-   ```bash
+   
+bash
    streamlit run app.py
-   ```
+
 
 ---
 
@@ -117,7 +120,6 @@ project-root/
 └── README.md               # Documentation
 ```
 
----
 
 ## 📊 Results and Performance
 
@@ -141,7 +143,7 @@ project-root/
 Special thanks to:
 - **YOLOv8 creators** for enabling advanced object detection.
 - **Streamlit team** for their powerful interactive framework.
-- All contributors to the open-source libraries used in this project.
+- **My family** for supporting me through college.
 
 
 ---
