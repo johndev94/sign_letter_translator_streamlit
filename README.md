@@ -123,6 +123,9 @@ project-root/
 
 ## 📊 Results and Performance
 
+![App showcase](images/image_translation.JPG)
+
+
 ### Model Accuracy
 - **ISL Dataset**: Achieved 99.5% accuracy with no false predictions.
 - **BSL Dataset**: mAP@0.5:0.95 reached **91.5%**.
@@ -135,6 +138,9 @@ project-root/
 - **Precision**: Accuracy of detected letters.
 - **Recall**: Completeness of detections.
 - **mAP (Mean Average Precision)**: Measures overall model performance.
+
+[Watch the demo video](images/Streamlit_demo-ezgif.com-video-to-gif-converter.gif)
+
 
 ---
 
